@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 380px;
+      background: white;
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      margin-bottom: 28px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px 14px;
+      margin-bottom: 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+
+    .options label {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .options input {
+      width: auto;
+      margin: 0;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .signup {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 14px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>로그인</h1>
+    <div class="subtitle">render.com 계정에 로그인하세요</div>
+
+    <form>
+      <label for="email">이메일</label>
+      <input type="email" id="email" placeholder="example@email.com" required />
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" placeholder="비밀번호 입력" required />
+
+      <div class="options">
+        <label>
+          <input type="checkbox" />
+          로그인 유지
+        </label>
+        <a href="#">비밀번호 찾기</a>
+      </div>
+
+      <button type="submit">로그인</button>
+    </form>
+
+    <div class="signup">
+      계정이 없나요? <a href="#">회원가입</a>
+    </div>
+  </div>
+</body>
+</html>
